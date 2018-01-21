@@ -6,7 +6,9 @@ description: >-
 
 baseurl: ""
 url: "https://mbechler.github.io/" 
-github_username:  mbechler
+
+footer-links:
+   github: mbechler
 
 # Build settings
 markdown: kramdown
@@ -15,13 +17,13 @@ theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
   - jekyll-archives
-  - jekyll-paginate
+#  - jekyll-paginate
   - jekyll-sitemap
 
 
 permalink: /:year/:month/:day/:title/
-paginate_path: /posts/:num/
-paginate: 5
+#paginate_path: /posts/:num/
+#paginate: 5
 
 jekyll-archives:
   enabled:
@@ -31,3 +33,27 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

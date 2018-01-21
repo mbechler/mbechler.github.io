@@ -1,9 +1,0 @@
-main:
-  - title: "Blog"
-    url: /
-  - title: "GitHub"
-    url: https://github.com/mbechler/
-  - title: "Archives"
-    url: /archives/
-  - title: "RSS"
-    url: /feed.xml
