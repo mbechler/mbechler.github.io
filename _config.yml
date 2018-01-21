@@ -11,7 +11,7 @@ github_username:  mbechler
 # Build settings
 markdown: kramdown
 #theme: minima
-theme: jekyll-whiteglass
+theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
   - jekyll-archives
