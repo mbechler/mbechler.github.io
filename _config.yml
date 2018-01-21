@@ -1,0 +1,32 @@
+title: Pure randomness
+email: mbechler@eenterphace.org
+author: Moritz Bechler
+description: >- 
+  Random ramblings, exploits and projects.   
+baseurl: ""
+url: "http://mbechler.github.io/" 
+github_username:  mbechler
+
+# Build settings
+markdown: kramdown
+#theme: minima
+theme: jekyll-whiteglass
+plugins:
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+
+
+permalink: /:year/:month/:day/:title/
+paginate_path: /posts/:num/
+paginate: 5
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: category_archives
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
