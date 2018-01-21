@@ -3,8 +3,9 @@ email: mbechler@eenterphace.org
 author: Moritz Bechler
 description: >- 
   Random ramblings, exploits and projects.   
+
 baseurl: ""
-url: "http://mbechler.github.io/" 
+url: "https://mbechler.github.io/" 
 github_username:  mbechler
 
 # Build settings
