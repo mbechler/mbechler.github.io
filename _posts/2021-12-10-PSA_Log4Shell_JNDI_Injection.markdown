@@ -33,7 +33,7 @@ CVE-2018-3149  in Java 8u191 (see <https://bugzilla.redhat.com/show_bug.cgi?id=1
 So, up to Java 8u191 there is a direct path from a controlled JNDI lookup to remote classloading
 of arbitrary code. That Java version is about 3 years old.
 
-However, exploitation do not end there. Turning back to RMI, References and object construction
+However, exploitation does not end there. Turning back to RMI, References and object construction
 with factories are still supported, just remote codebases are prohibited. 
 Michael Stepankin in <https://www.veracode.com/blog/research/exploiting-jndi-injections-java> 
 describes how the Apache XBean _BeanFactory_ can be used in a returned Reference to achieve
@@ -50,6 +50,7 @@ in many cases this will still be exploitable for remote code execution.
 Long story short: Do not rely on a current Java version to save you. Update Log4 (or remove the JNDI lookup). 
 Disable the expansion (seems a pretty bad idea anyways).
 
+Update (14.12): In the original post I forgot to mention CORBA/IIOP which is the third relevant JNDI protocol. Impact is very similar to RMI.
 
 Previously on this blog:
 - <https://mbechler.github.io/2018/11/01/Java-CVE-2018-3149/> - Oracle patching JNDI/LDAP
